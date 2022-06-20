@@ -1,4 +1,16 @@
 function hasTargetSum(array, target) {
+  const numTarget=[];
+
+  for(let num of array){
+    const numMatch =target-num;
+
+      if(numMatch in numTarget){
+        return true;
+      }
+
+      numTarget[num]=true;
+  }
+  return false;
   // Write your algorithm here
 }
 
